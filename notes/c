@@ -1,0 +1,75 @@
+digraph{
+
+# Graph style
+"ordering"="out"
+"rankdir"="TD"
+
+#########
+# Nodes #
+#########
+
+"Mul(Integer(4), Symbol('M'), Pow(Add(Mul(Integer(-1), Pow(Symbol('M'), Integer(2))), Mul(Integer(4), Pow(BaseScalarField(CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict()), Integer(1)), Integer(2)))), Integer(-1)))_()" ["color"="black", "label"="Mul", "shape"="ellipse"];
+"Integer(4)_(0,)" ["color"="black", "label"="4", "shape"="ellipse"];
+"Symbol('M')_(1,)" ["color"="black", "label"="M", "shape"="ellipse"];
+"Pow(Add(Mul(Integer(-1), Pow(Symbol('M'), Integer(2))), Mul(Integer(4), Pow(BaseScalarField(CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict()), Integer(1)), Integer(2)))), Integer(-1))_(2,)" ["color"="black", "label"="Pow", "shape"="ellipse"];
+"Add(Mul(Integer(-1), Pow(Symbol('M'), Integer(2))), Mul(Integer(4), Pow(BaseScalarField(CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict()), Integer(1)), Integer(2))))_(2, 0)" ["color"="black", "label"="Add", "shape"="ellipse"];
+"Mul(Integer(-1), Pow(Symbol('M'), Integer(2)))_(2, 0, 0)" ["color"="black", "label"="Mul", "shape"="ellipse"];
+"Integer(-1)_(2, 0, 0, 0)" ["color"="black", "label"="-1", "shape"="ellipse"];
+"Pow(Symbol('M'), Integer(2))_(2, 0, 0, 1)" ["color"="black", "label"="Pow", "shape"="ellipse"];
+"Symbol('M')_(2, 0, 0, 1, 0)" ["color"="black", "label"="M", "shape"="ellipse"];
+"Integer(2)_(2, 0, 0, 1, 1)" ["color"="black", "label"="2", "shape"="ellipse"];
+"Mul(Integer(4), Pow(BaseScalarField(CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict()), Integer(1)), Integer(2)))_(2, 0, 1)" ["color"="black", "label"="Mul", "shape"="ellipse"];
+"Integer(4)_(2, 0, 1, 0)" ["color"="black", "label"="4", "shape"="ellipse"];
+"Pow(BaseScalarField(CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict()), Integer(1)), Integer(2))_(2, 0, 1, 1)" ["color"="black", "label"="Pow", "shape"="ellipse"];
+"BaseScalarField(CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict()), Integer(1))_(2, 0, 1, 1, 0)" ["color"="black", "label"="BaseScalarField", "shape"="ellipse"];
+"CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict())_(2, 0, 1, 1, 0, 0)" ["color"="blue", "label"="CoordSystem", "shape"="ellipse"];
+"Str('Spacetime_coords')_(2, 0, 1, 1, 0, 0, 0)" ["color"="blue", "label"="Spacetime_coords", "shape"="ellipse"];
+"Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4)))_(2, 0, 1, 1, 0, 0, 1)" ["color"="blue", "label"="Patch", "shape"="ellipse"];
+"Str('P')_(2, 0, 1, 1, 0, 0, 1, 0)" ["color"="blue", "label"="P", "shape"="ellipse"];
+"Manifold(Str('Spacetime'), Integer(4))_(2, 0, 1, 1, 0, 0, 1, 1)" ["color"="blue", "label"="Manifold", "shape"="ellipse"];
+"Str('Spacetime')_(2, 0, 1, 1, 0, 0, 1, 1, 0)" ["color"="blue", "label"="Spacetime", "shape"="ellipse"];
+"Integer(4)_(2, 0, 1, 1, 0, 0, 1, 1, 1)" ["color"="black", "label"="4", "shape"="ellipse"];
+"Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True))_(2, 0, 1, 1, 0, 0, 2)" ["color"="blue", "label"="Tuple", "shape"="ellipse"];
+"Symbol('t', commutative=True)_(2, 0, 1, 1, 0, 0, 2, 0)" ["color"="black", "label"="t", "shape"="ellipse"];
+"Symbol('M', commutative=True)_(2, 0, 1, 1, 0, 0, 2, 1)" ["color"="black", "label"="M", "shape"="ellipse"];
+"Symbol('theta', commutative=True)_(2, 0, 1, 1, 0, 0, 2, 2)" ["color"="black", "label"="theta", "shape"="ellipse"];
+"Symbol('phi', commutative=True)_(2, 0, 1, 1, 0, 0, 2, 3)" ["color"="black", "label"="phi", "shape"="ellipse"];
+"Dict()_(2, 0, 1, 1, 0, 0, 3)" ["color"="blue", "label"="Dict", "shape"="ellipse"];
+"Integer(1)_(2, 0, 1, 1, 0, 1)" ["color"="black", "label"="1", "shape"="ellipse"];
+"Integer(2)_(2, 0, 1, 1, 1)" ["color"="black", "label"="2", "shape"="ellipse"];
+"Integer(-1)_(2, 1)" ["color"="black", "label"="-1", "shape"="ellipse"];
+
+#########
+# Edges #
+#########
+
+"Mul(Integer(4), Symbol('M'), Pow(Add(Mul(Integer(-1), Pow(Symbol('M'), Integer(2))), Mul(Integer(4), Pow(BaseScalarField(CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict()), Integer(1)), Integer(2)))), Integer(-1)))_()" -> "Integer(4)_(0,)";
+"Mul(Integer(4), Symbol('M'), Pow(Add(Mul(Integer(-1), Pow(Symbol('M'), Integer(2))), Mul(Integer(4), Pow(BaseScalarField(CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict()), Integer(1)), Integer(2)))), Integer(-1)))_()" -> "Symbol('M')_(1,)";
+"Mul(Integer(4), Symbol('M'), Pow(Add(Mul(Integer(-1), Pow(Symbol('M'), Integer(2))), Mul(Integer(4), Pow(BaseScalarField(CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict()), Integer(1)), Integer(2)))), Integer(-1)))_()" -> "Pow(Add(Mul(Integer(-1), Pow(Symbol('M'), Integer(2))), Mul(Integer(4), Pow(BaseScalarField(CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict()), Integer(1)), Integer(2)))), Integer(-1))_(2,)";
+"Pow(Add(Mul(Integer(-1), Pow(Symbol('M'), Integer(2))), Mul(Integer(4), Pow(BaseScalarField(CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict()), Integer(1)), Integer(2)))), Integer(-1))_(2,)" -> "Add(Mul(Integer(-1), Pow(Symbol('M'), Integer(2))), Mul(Integer(4), Pow(BaseScalarField(CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict()), Integer(1)), Integer(2))))_(2, 0)";
+"Pow(Add(Mul(Integer(-1), Pow(Symbol('M'), Integer(2))), Mul(Integer(4), Pow(BaseScalarField(CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict()), Integer(1)), Integer(2)))), Integer(-1))_(2,)" -> "Integer(-1)_(2, 1)";
+"Add(Mul(Integer(-1), Pow(Symbol('M'), Integer(2))), Mul(Integer(4), Pow(BaseScalarField(CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict()), Integer(1)), Integer(2))))_(2, 0)" -> "Mul(Integer(-1), Pow(Symbol('M'), Integer(2)))_(2, 0, 0)";
+"Add(Mul(Integer(-1), Pow(Symbol('M'), Integer(2))), Mul(Integer(4), Pow(BaseScalarField(CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict()), Integer(1)), Integer(2))))_(2, 0)" -> "Mul(Integer(4), Pow(BaseScalarField(CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict()), Integer(1)), Integer(2)))_(2, 0, 1)";
+"Mul(Integer(-1), Pow(Symbol('M'), Integer(2)))_(2, 0, 0)" -> "Integer(-1)_(2, 0, 0, 0)";
+"Mul(Integer(-1), Pow(Symbol('M'), Integer(2)))_(2, 0, 0)" -> "Pow(Symbol('M'), Integer(2))_(2, 0, 0, 1)";
+"Pow(Symbol('M'), Integer(2))_(2, 0, 0, 1)" -> "Symbol('M')_(2, 0, 0, 1, 0)";
+"Pow(Symbol('M'), Integer(2))_(2, 0, 0, 1)" -> "Integer(2)_(2, 0, 0, 1, 1)";
+"Mul(Integer(4), Pow(BaseScalarField(CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict()), Integer(1)), Integer(2)))_(2, 0, 1)" -> "Integer(4)_(2, 0, 1, 0)";
+"Mul(Integer(4), Pow(BaseScalarField(CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict()), Integer(1)), Integer(2)))_(2, 0, 1)" -> "Pow(BaseScalarField(CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict()), Integer(1)), Integer(2))_(2, 0, 1, 1)";
+"Pow(BaseScalarField(CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict()), Integer(1)), Integer(2))_(2, 0, 1, 1)" -> "BaseScalarField(CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict()), Integer(1))_(2, 0, 1, 1, 0)";
+"Pow(BaseScalarField(CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict()), Integer(1)), Integer(2))_(2, 0, 1, 1)" -> "Integer(2)_(2, 0, 1, 1, 1)";
+"BaseScalarField(CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict()), Integer(1))_(2, 0, 1, 1, 0)" -> "CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict())_(2, 0, 1, 1, 0, 0)";
+"BaseScalarField(CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict()), Integer(1))_(2, 0, 1, 1, 0)" -> "Integer(1)_(2, 0, 1, 1, 0, 1)";
+"CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict())_(2, 0, 1, 1, 0, 0)" -> "Str('Spacetime_coords')_(2, 0, 1, 1, 0, 0, 0)";
+"CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict())_(2, 0, 1, 1, 0, 0)" -> "Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4)))_(2, 0, 1, 1, 0, 0, 1)";
+"CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict())_(2, 0, 1, 1, 0, 0)" -> "Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True))_(2, 0, 1, 1, 0, 0, 2)";
+"CoordSystem(Str('Spacetime_coords'), Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4))), Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True)), Dict())_(2, 0, 1, 1, 0, 0)" -> "Dict()_(2, 0, 1, 1, 0, 0, 3)";
+"Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4)))_(2, 0, 1, 1, 0, 0, 1)" -> "Str('P')_(2, 0, 1, 1, 0, 0, 1, 0)";
+"Patch(Str('P'), Manifold(Str('Spacetime'), Integer(4)))_(2, 0, 1, 1, 0, 0, 1)" -> "Manifold(Str('Spacetime'), Integer(4))_(2, 0, 1, 1, 0, 0, 1, 1)";
+"Manifold(Str('Spacetime'), Integer(4))_(2, 0, 1, 1, 0, 0, 1, 1)" -> "Str('Spacetime')_(2, 0, 1, 1, 0, 0, 1, 1, 0)";
+"Manifold(Str('Spacetime'), Integer(4))_(2, 0, 1, 1, 0, 0, 1, 1)" -> "Integer(4)_(2, 0, 1, 1, 0, 0, 1, 1, 1)";
+"Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True))_(2, 0, 1, 1, 0, 0, 2)" -> "Symbol('t', commutative=True)_(2, 0, 1, 1, 0, 0, 2, 0)";
+"Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True))_(2, 0, 1, 1, 0, 0, 2)" -> "Symbol('M', commutative=True)_(2, 0, 1, 1, 0, 0, 2, 1)";
+"Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True))_(2, 0, 1, 1, 0, 0, 2)" -> "Symbol('theta', commutative=True)_(2, 0, 1, 1, 0, 0, 2, 2)";
+"Tuple(Symbol('t', commutative=True), Symbol('M', commutative=True), Symbol('theta', commutative=True), Symbol('phi', commutative=True))_(2, 0, 1, 1, 0, 0, 2)" -> "Symbol('phi', commutative=True)_(2, 0, 1, 1, 0, 0, 2, 3)";
+}
