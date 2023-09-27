@@ -24,7 +24,7 @@ def get_schwarzschild_metric(coordinates: str = "schwarzschild"):
         g = -(1 - 2 * M / r) * TP(dt, dt) + (1 / (1 - 2 * M / r)) * TP(dr, dr) + r**2 * (TP(dtheta, dtheta) + sympy.sin(theta) ** 2 * TP(dphi, dphi))
 
         return (g, (t, r, theta, phi)) 
-    else if coordinates == "spherical_isotropic":
+    elif coordinates == "spherical_isotropic":
         t_s, r_s, theta_s, phi_s, M = sympy.symbols("t, r, theta, phi, M") 
         coord_system = get_spacetime_coordsystem(t_s, r_s, theta_s, phi_s)
         dt, dr, dtheta, dphi = coord_system.base_oneforms()
@@ -38,5 +38,43 @@ def get_schwarzschild_metric(coordinates: str = "schwarzschild"):
 
     else:
         raise Exception("Unregonized coordinates for get_schwarzschild_metric!")
-from sympy import diffgeom as dg
 
+
+def get_euclidean_patch(n: int):
+    M = dg.Manifold("Spacetime", n)
+    P = dg.Patch('P', M)
+    return P
+
+def get_euclidean_coordsystem(*coordinates):
+    return dg.CoordSystem(
+            'euclidean_coords',
+            get_euclidean_patch(len(coordinates)),
+            coordinates
+        )
+                            
+def get_euclidean_metric(coordinates: str = "orthogonal"):
+    TP = dg.TensorProduct
+    if coordinates == "orthogonal":
+        x_s, y_s, z_s = sympy.symbols("x, y, z") 
+        coord_system = get_euclidean_coordsystem(x_s, y_s, z_s)
+        dx, dy, dz = coord_system.base_oneforms()
+
+        x, y, z = coord_system.coord_functions()
+        g = TP(dx, dx) + TP(dy, dy) + TP(dz, dz)
+
+        return (g, (x, y, z)) 
+
+    elif coordinates == "spherical":
+        r_s, theta_s, phi_s = sympy.symbols("r, theta, phi") 
+        coord_system = get_euclidean_coordsystem(r_s, theta_s, phi_s)
+        dr, dtheta, dphi = coord_system.base_oneforms()
+
+        r, theta, phi = coord_system.coord_functions()
+        g11 = 1 
+        g22 = r**2
+        g33 = r**2 * sympy.sin(theta)**2
+        g = g11 * TP(dr, dr) + g22 * TP(dtheta, dtheta) + g33 * TP(dphi, dphi)
+        return (g, (r, theta, phi)) 
+
+    else:
+        raise Exception("Unregonized coordinates for get_euclidean_metric!")
