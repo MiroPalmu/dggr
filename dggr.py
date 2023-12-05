@@ -36,6 +36,22 @@ def get_schwarzschild_metric(coordinates: str = "schwarzschild"):
 
         return (g, (t, r, theta, phi)) 
 
+    elif coordinates == "kerr-schild":
+        x0_s, x1_s, x2_s, x3_s, M = sympy.symbols("x0, x1, x2, x3, M")
+        coord_system = get_spacetime_coordsystem(x0_s, x1_s, x2_s, x3_s)
+        dx0, dx1, dx2, dx3 = coord_system.base_oneforms()
+
+        x0, x1, x2, x3 = coord_system.coord_functions()
+        r = sympy.sqrt(x0**2 + x1**2 + x2**2 + x3**2)
+        H = M / r
+
+        l_oneform = dx0 + (x1 / r) * dx1 + (x2 / r) * dx2 + (x3 / r) * dx3
+        minkowski_metric = -TP(dx0, dx0) + TP(dx1, dx1) + TP(dx2, dx2) +  TP(dx3, dx3)
+
+        g = minkowski_metric + 2 * H * TP(l_oneform, l_oneform)
+
+        return (g, (x0, x1, x2, x3))
+
     else:
         raise Exception("Unregonized coordinates for get_schwarzschild_metric!")
 
